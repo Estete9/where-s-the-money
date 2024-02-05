@@ -2,9 +2,10 @@ require 'rails_helper'
 require 'pry'
 
 RSpec.describe Category, type: :model do
-  it 'is valid with a name, and icon class' do
-    category = build(:category)
+  let(:user) { create(:user) }
+  let(:category) { create(:category, user: user) }
 
+  it 'is valid with a name, and icon class' do
     expect(category).to be_valid
   end
 
@@ -18,5 +19,9 @@ RSpec.describe Category, type: :model do
     category = build(:category, icon: nil)
 
     expect(category).to be_valid
+  end
+
+  it 'belongs to user' do
+    expect(category.user).to eq(user)
   end
 end

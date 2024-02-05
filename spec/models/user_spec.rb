@@ -1,8 +1,9 @@
 require 'rails_helper'
+require 'pry'
 
 RSpec.describe User, type: :model do
+  let(:user) { create(:user) }
   it 'is valid with a name, email, and password' do
-    user = build(:user)
     expect(user).to be_valid
   end
 
@@ -21,5 +22,10 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
   end
 
+  it 'has many categories' do
+    category1 = create(:category, user: user)
+    category2 = create(:category, user: user)
 
+    expect(user.categories).to include(category1, category2)
+  end
 end
