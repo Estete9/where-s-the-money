@@ -1,5 +1,10 @@
 <h1>Activities</h1>
 
+<div>
+  <h2><%= @category.name %></h2>
+  <strong><p>$<%= "%.2f" % @category.total_amount %></p></strong>
+</div>
+
 <div id="activities">
   <% @activities.each do |activity| %>
     <%= link_to category_activity_path(category_id: @category.id, id: activity.id) do %>

@@ -1,5 +1,5 @@
 <div id="<%= dom_id category %>">
   <h2><%= category.name %></h2>
   <%= image_tag("icons/#{category.icon}", style: "height: 50px") %>
-  <p>Total amount: <%= category.total_amount  %></p>
+  <p>Total amount: $<%= "%.2f" % category.total_amount  %></p>
 </div>
