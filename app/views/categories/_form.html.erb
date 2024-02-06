@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div>
+    <label for="icon" class="form-label">Icon</label>
+    <select name="category[icon]" id="icon">
+      <option value="education.svg">Education</option>
+      <option value="food.svg">Food</option>
+      <option value="services.svg">Services</option>
+    </select>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

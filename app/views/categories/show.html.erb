@@ -3,6 +3,11 @@
 <div>
   <%= link_to "Edit this category", edit_category_path(@category) %> |
   <%= link_to "Back to categories", categories_path %>
-
+  <div class="category-item">
+    <div class="category-icon">
+      <%= image_tag("icons/#{@category.icon}", style: "height: 50px") %>
+    </div>
+      <h1><%= @category.name %></h1>
+  </div>
   <%= button_to "Destroy this category", @category, method: :delete %>
 </div>

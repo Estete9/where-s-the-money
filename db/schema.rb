@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_05_193533) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name", default: "New Category", null: false
-    t.string "icon", default: "fa-solid fa-wallet", null: false
+    t.string "icon", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
