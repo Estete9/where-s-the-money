@@ -2,10 +2,9 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+    <%= link_to activities_path(category_id: category.id) do %>
+      <%= render category %>
+    <% end %>
   <% end %>
 </div>
 
