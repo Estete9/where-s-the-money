@@ -3,15 +3,20 @@ class ActivitiesController < ApplicationController
 
   # GET /activities or /activities.json
   def index
-    @activities = Activity.where(category_id: params[:category_id])
+    @category = Category.find_by(id: params[:category_id])
+    @activities = @category.activities
   end
 
   # GET /activities/1 or /activities/1.json
   def show
+    @category = Category.find(params[:category_id])
+
   end
 
   # GET /activities/new
   def new
+    @categories = Category.where(user_id: current_user.id)
+    @category = Category.find_by(id: params[:category_id])
     @activity = Activity.new
   end
 
@@ -21,11 +26,14 @@ class ActivitiesController < ApplicationController
 
   # POST /activities or /activities.json
   def create
-    @activity = Activity.new(activity_params)
+    @category = Category.find(params[:category_id])
+    @activity = Activity.new(activity_params.merge(author: current_user))
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully created." }
+        @activity.categories << @category
+
+        format.html { redirect_to category_activities_url(category_id: @category.id), notice: "Activity was successfully created." }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -52,7 +60,7 @@ class ActivitiesController < ApplicationController
     @activity.destroy!
 
     respond_to do |format|
-      format.html { redirect_to activities_url, notice: "Activity was successfully destroyed." }
+      format.html { redirect_to category_activities_url, notice: "Activity was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -65,6 +73,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :amount, :author_id)
+      params.require(:activity).permit(:name, :amount, :category_id)
     end
 end

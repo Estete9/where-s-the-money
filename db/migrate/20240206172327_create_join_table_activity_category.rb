@@ -1,6 +1,6 @@
 class CreateJoinTableActivityCategory < ActiveRecord::Migration[7.1]
   def change
-    create_join_table :categories, :activities do |t|
+    create_join_table :activities, :categories do |t|
     end
 
     add_index :activities_categories, :category_id

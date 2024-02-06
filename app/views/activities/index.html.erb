@@ -1,14 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Activities</h1>
 
 <div id="activities">
   <% @activities.each do |activity| %>
-    <%= render activity %>
-    <p>
-      <%= link_to "Show this activity", activity %>
-    </p>
+    <%= link_to category_activity_path(category_id: @category.id, id: activity.id) do %>
+      <%= render activity %>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New activity", new_activity_path %>
+<%= link_to "New activity", new_category_activity_path(category_id: @category.id) %>

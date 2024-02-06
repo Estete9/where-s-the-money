@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :activities
-  resources :categories
+  resources :categories do
+    resources :activities
+  end
+
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         registrations: 'users/registrations'

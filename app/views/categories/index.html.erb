@@ -2,7 +2,7 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
-    <%= link_to activities_path(category_id: category.id) do %>
+    <%= link_to category_activities_path(category_id: category.id) do %>
       <%= render category %>
     <% end %>
   <% end %>
