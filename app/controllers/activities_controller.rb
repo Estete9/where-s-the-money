@@ -3,7 +3,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities or /activities.json
   def index
-    @activities = Activity.all
+    @activities = Activity.where(category_id: params[:category_id])
   end
 
   # GET /activities/1 or /activities/1.json
