@@ -22,4 +22,15 @@ RSpec.describe Activity, type: :model do
     activity = build(:activity, author: user)
     expect(activity.author).to eq(user)
   end
+
+  it 'can have multiple categories' do
+    activity = create(:activity, author: user)
+    category1 = create(:category, user: user)
+    category2 = create(:category, user: user)
+
+    activity.categories << category1
+    activity.categories << category2
+
+    expect(activity.categories).to include(category1, category2)
+  end
 end

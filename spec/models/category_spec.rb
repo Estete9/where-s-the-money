@@ -15,13 +15,24 @@ RSpec.describe Category, type: :model do
     expect(category).to_not be_valid
   end
 
-  it 'is valid without an icon' do
+  it 'is invalid without an icon' do
     category = build(:category, icon: nil)
 
-    expect(category).to be_valid
+    expect(category).to_not be_valid
   end
 
   it 'belongs to user' do
     expect(category.user).to eq(user)
+  end
+
+  it 'can have multiple activities' do
+    activity1 = create(:activity, author: user)
+    activity2 = create(:activity, author: user)
+    category = create(:category, user: user)
+
+    category.activities << activity1
+    category.activities << activity2
+
+    expect(category.activities).to include(activity1, activity2)
   end
 end
