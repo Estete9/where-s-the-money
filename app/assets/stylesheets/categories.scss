@@ -3,16 +3,18 @@ $color-second: #5fb523;
 $color-text: #434b52;
 
 #categories-wrapper {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 
   * {
-margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   .categories-content {
     display: flex;
     flex-direction: column;
-    height: 91%;
+    flex: 1;
 
     #categories {
       display: flex;
