@@ -12,3 +12,6 @@
 </div>
 
 <%= link_to "New activity", new_category_activity_path(category_id: @category.id) %>
+<%= link_to root_path do %>
+  <%= image_tag("back_arrow.svg", alt: "Back", width: "20", height: "20") %>
+<% end %>
