@@ -1,17 +1,11 @@
 class ActivitiesController < ApplicationController
 
-  before_action :set_activity, only: %i[ show edit update destroy ]
+  before_action :set_activity, only: %i[ edit update destroy ]
 
   # GET /activities or /activities.json
   def index
     @category = Category.find_by(id: params[:category_id])
     @activities = @category.activities
-  end
-
-  # GET /activities/1 or /activities/1.json
-  def show
-    @category = Category.find(params[:category_id])
-
   end
 
   # GET /activities/new

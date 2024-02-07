@@ -19,9 +19,12 @@
   <div>
     <label for="icon" class="form-label">Icon</label>
     <select name="category[icon]" id="icon">
-      <option value="education.svg">Education</option>
-      <option value="food.svg">Food</option>
-      <option value="services.svg">Services</option>
+      <% Dir.glob('app/assets/images/icons/*.svg').each do |icon| %>
+        <% icon_name = File.basename(icon, '.*') %>
+          <option value="<%= icon_name %>">
+            <%= icon_name.capitalize.tr('_', ' ') %>
+          </option>
+      <% end %>
     </select>
   </div>
 
