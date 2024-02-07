@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="mb-3">
-    <%= form.label :name, class: "form-label" %>
-    <%= form.text_field :name, class: "form-control" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Category name" %>
   </div>
 
   <div>
@@ -28,7 +27,7 @@
     </select>
   </div>
 
-  <div>
-    <%= form.submit "Save" %>
+  <div class="form-btn-section">
+    <%= form.submit "Save", class: "btn btn-primary form-btn" %>
   </div>
 <% end %>
