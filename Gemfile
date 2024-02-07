@@ -71,7 +71,7 @@ group :development do
 end
 
 gem 'pry'
-gem 'bootstrap'
+gem 'bootstrap-sass'
 gem 'cancancan'
 gem 'devise'
 gem 'jquery-rails'
