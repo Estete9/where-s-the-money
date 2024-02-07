@@ -1,7 +1,0 @@
-<%= render @activity %>
-
-<div>
-  <%= link_to "Back to activities", category_activities_path %>
-
-  <%= button_to "Destroy this activity", category_activity_path(category_id: @category.id, id: @activity.id), method: :delete %>
-</div>

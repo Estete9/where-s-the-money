@@ -7,9 +7,7 @@
 
 <div id="activities">
   <% @activities.each do |activity| %>
-    <%= link_to category_activity_path(category_id: @category.id, id: activity.id) do %>
       <%= render activity %>
-    <% end %>
   <% end %>
 </div>
 
