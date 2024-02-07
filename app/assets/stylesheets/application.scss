@@ -36,4 +36,22 @@ body {
   flex-direction: column;
   height: 100vh;
   background-color: rgb(242, 240, 240);
+   
+  .create-item-section {
+    padding: 15px;
+    background-color: $color-second;
+    display: flex;
+    height: 90px;
+
+    .new-item-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border-radius: 0;
+      background-color: $color-second;
+      color: white;
+      border: white 2px solid;
+    }
+  }
 }
