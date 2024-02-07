@@ -1,3 +1,19 @@
+#log-in-wrapper {
+  background-color: rgb(242, 240, 240);
+}
+#log-in-wrapper form {
+  height: 90vh;
+}
+#log-in-wrapper .inputs {
+  flex: 1;
+}
+#log-in-wrapper .form-content {
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 0;
+  background-color: white;
+}
 #log-in-wrapper * {
   color: #434b52;
 }
@@ -5,7 +21,26 @@
   display: flex;
   justify-content: space-between;
   background-color: #3378c2;
+  align-items: center;
+  padding: 15px;
+}
+#log-in-wrapper #log-in-header h2 {
+  margin-bottom: 0;
 }
 #log-in-wrapper #log-in-header * {
   color: white;
+}
+#log-in-wrapper #log-in-header .next-btn {
+  padding: 0;
+}
+#log-in-wrapper .recov-regis-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+#log-in-wrapper .form-field {
+  border-radius: 0;
+}
+#log-in-wrapper .email-field input::placeholder, #log-in-wrapper .password-field input::placeholder {
+  opacity: 0.5;
 }/*# sourceMappingURL=log-in.css.map */
