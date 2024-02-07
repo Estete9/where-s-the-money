@@ -44,7 +44,6 @@
   color: #3378c2;
 }
 .devise-wrapper .form-field {
-  border-radius: 0;
   height: 50px;
 }
 .devise-wrapper .field input::placeholder {

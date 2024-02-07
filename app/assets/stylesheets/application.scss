@@ -37,6 +37,13 @@ body {
   height: 100vh;
   background-color: rgb(242, 240, 240);
    
+  #flash-messages {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
   .header {
     display: flex;
     justify-content: center;
@@ -47,6 +54,18 @@ body {
     * {
       color: white;
     }
+
+    h1 {
+      margin-top: 15px;
+    }
+  }
+
+  .form-control {
+    border-radius: 0;
+  }
+
+  .form-select {
+    border-radius: 0;
   }
   
   .form-btn-section {

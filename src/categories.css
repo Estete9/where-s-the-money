@@ -1,4 +1,6 @@
 #categories-wrapper {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 #categories-wrapper * {
@@ -7,7 +9,7 @@
 #categories-wrapper .categories-content {
   display: flex;
   flex-direction: column;
-  height: 91%;
+  flex: 1;
 }
 #categories-wrapper .categories-content #categories {
   display: flex;
