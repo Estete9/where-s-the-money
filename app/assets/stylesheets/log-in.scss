@@ -1,0 +1,19 @@
+$color-main: #3378c2;
+$color-second: #5fb523;
+$color-text: #434b52;
+
+#log-in-wrapper {
+  * {
+    color: $color-text;
+  }
+  #log-in-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-main;
+
+    * {
+      color: white;
+    }
+  }
+  
+}

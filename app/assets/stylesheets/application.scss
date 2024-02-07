@@ -22,13 +22,13 @@ $color-second: #5fb523;
 $color-text: #434b52;
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Proxima Nova', sans-serif; 
-  font-weight: bold; 
+  font-family: 'Proxima Nova', sans-serif !important; 
+  font-weight: bold !important; 
 }
 
 p, span, div, a {
-  font-family: 'Proxima Nova', sans-serif; 
-  font-weight: 300; /* Use light font weight for general text */
+  font-family: 'Proxima Nova', sans-serif !important; 
+  font-weight: 300 !important;
 }
 
 body {

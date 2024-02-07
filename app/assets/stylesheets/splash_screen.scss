@@ -13,8 +13,8 @@ $color-text: #434b52;
     align-items: center;
     flex: 1;
 
-    h1 {
-      color: #434b52;
+    * {
+      color: $color-text;
     }
   }
 
@@ -28,10 +28,6 @@ $color-text: #434b52;
     .devise-btn {
       border-radius: 0.2rem;
       margin: 0 4vw;
-    }
-    
-    .sign-up-btn {
-      color: $color-text;
     }
 
     .log-in-btn {

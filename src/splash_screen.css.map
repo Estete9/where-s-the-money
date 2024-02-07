@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../app/assets/stylesheets/splash_screen.scss"],"names":[],"mappings":"AAIA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE,OA3BO;;AA8BT;EACA,kBAjCS","file":"splash_screen.css"}
+{"version":3,"sourceRoot":"","sources":["../app/assets/stylesheets/splash_screen.scss"],"names":[],"mappings":"AAIA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE,OAdO;;AAkBX;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACA,kBAjCS","file":"splash_screen.css"}
