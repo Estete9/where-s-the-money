@@ -24,9 +24,9 @@ RSpec.describe Activity, type: :model do
   end
 
   it 'can have multiple categories' do
-    activity = create(:activity, author: user)
     category1 = create(:category, user: user)
     category2 = create(:category, user: user)
+    activity = create(:activity, author: user)
 
     activity.categories << category1
     activity.categories << category2
