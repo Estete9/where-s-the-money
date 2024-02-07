@@ -13,3 +13,17 @@
  */
 
  @import "bootstrap";
+
+$color-main: #3378c2;
+$color-second: #5fb523;
+$color-text: #434b52;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Proxima Nova', sans-serif; 
+  font-weight: bold; 
+}
+
+p, span, div, a {
+  font-family: 'Proxima Nova', sans-serif; 
+  font-weight: 300; /* Use light font weight for general text */
+}
