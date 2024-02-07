@@ -1,0 +1,54 @@
+.activities-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  * {
+    margin-bottom: 0;
+  }
+
+  .activities-header {
+  
+    h1 {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  .category-info {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    
+    .category-info-name {
+      flex: 1;
+    }
+  }
+  
+  .activities-content{
+    padding: 10px;
+    flex: 1;
+    
+    #activities {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .activity-item {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 10px;
+        height: 70px;
+
+        h5 {
+          flex: 1;
+        }
+      }
+    }
+  
+  }
+
+}
+

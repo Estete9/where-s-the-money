@@ -4,16 +4,6 @@
 #categories-wrapper * {
   margin-bottom: 0;
 }
-#categories-wrapper .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3378c2;
-  padding: 15px;
-}
-#categories-wrapper .header * {
-  color: white;
-}
 #categories-wrapper .categories-content {
   display: flex;
   flex-direction: column;

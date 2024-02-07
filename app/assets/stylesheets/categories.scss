@@ -9,18 +9,6 @@ $color-text: #434b52;
 margin-bottom: 0;
   }
 
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-main;
-    padding: 15px;
-
-    * {
-      color: white;
-    }
-  }
-
   .categories-content {
     display: flex;
     flex-direction: column;

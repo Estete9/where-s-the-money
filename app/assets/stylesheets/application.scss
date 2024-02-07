@@ -37,6 +37,18 @@ body {
   height: 100vh;
   background-color: rgb(242, 240, 240);
    
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-main;
+    padding: 15px;
+
+    * {
+      color: white;
+    }
+  }
+  
   .create-item-section {
     padding: 15px;
     background-color: $color-second;
