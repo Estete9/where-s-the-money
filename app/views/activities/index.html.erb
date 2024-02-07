@@ -6,8 +6,14 @@
 </div>
 
 <div id="activities">
-  <% @activities.each do |activity| %>
-      <%= render activity %>
+  <% if @activities.any?%>
+    <% @activities.each do |activity| %>
+        <%= render activity %>
+    <% end %>
+  <% else %>
+    <div class="text-center py-3 bg-light border rounded">
+      <p class="text-muted mb-0">Empty list, new Activities will show here...</p>
+    </div>
   <% end %>
 </div>
 

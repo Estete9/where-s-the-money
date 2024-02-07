@@ -1,10 +1,16 @@
 <h1>Categories</h1>
 
 <div id="categories">
-  <% @categories.each do |category| %>
-    <%= link_to category_activities_path(category_id: category.id) do %>
-      <%= render category %>
+  <% if @categories.any?%>
+    <% @categories.each do |category| %>
+      <%= link_to category_activities_path(category_id: category.id) do %>
+        <%= render category %>
+      <% end %>
     <% end %>
+  <% else %>
+    <div class="text-center py-3 bg-light border rounded">
+      <p class="text-muted mb-0">Empty list, new Categories will show here...</p>
+    </div>
   <% end %>
 </div>
 
