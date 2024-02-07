@@ -4,9 +4,6 @@
 
 <br>
 
-<div>
-  <%= link_to "Back to activities", category_activities_path(category_id: @category.id) %>
-</div>
 <%= link_to category_activities_path(@category.id) do %>
   <%= image_tag("back_arrow.svg", alt: "Back", width: "20", height: "20") %>
 <% end %>
