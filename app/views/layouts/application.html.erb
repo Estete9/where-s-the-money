@@ -13,8 +13,12 @@
   </head>
 
   <body>
-    <p style="color: green" class="notice"><%= notice %></p>
-    <p style="color: red" class="alert"><%= alert %></p>
+    <% if notice.present? %>
+      <p style="color: green" class="notice"><%= notice %></p>
+    <% end %>
+    <% if notice.present? %>
+      <p style="color: red" class="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
