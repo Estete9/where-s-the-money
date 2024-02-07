@@ -15,7 +15,7 @@ $color-text: #434b52;
   }
   
   .form-content {
-    height: 33%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     margin: 2vh 0;
@@ -48,13 +48,21 @@ $color-text: #434b52;
     display: flex;
     justify-content: center;
     margin-bottom: 2vh;
+    gap: 10px;
+    
+    .btn {
+      border: $color-main 1px solid;
+      color: $color-main;
+    //   color: white;
+    }
   }
 
   .form-field {
     border-radius: 0;
+    height: 50px;
   }
 
-  .email-field input::placeholder, .password-field input::placeholder {
+  .field input::placeholder {
     opacity: 0.5;
   }
 }

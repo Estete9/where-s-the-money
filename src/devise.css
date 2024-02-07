@@ -8,7 +8,7 @@
   flex: 1;
 }
 .devise-wrapper .form-content {
-  height: 33%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   margin: 2vh 0;
@@ -37,10 +37,16 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2vh;
+  gap: 10px;
+}
+.devise-wrapper .recov-regis-btns .btn {
+  border: #3378c2 1px solid;
+  color: #3378c2;
 }
 .devise-wrapper .form-field {
   border-radius: 0;
+  height: 50px;
 }
-.devise-wrapper .email-field input::placeholder, .devise-wrapper .password-field input::placeholder {
+.devise-wrapper .field input::placeholder {
   opacity: 0.5;
-}/*# sourceMappingURL=log-in.css.map */
+}/*# sourceMappingURL=devise.css.map */
