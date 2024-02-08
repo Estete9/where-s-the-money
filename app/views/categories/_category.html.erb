@@ -1,5 +1,5 @@
 <div id="<%= dom_id category %>" class="category-item">
-  <%= image_tag(asset_url("icons/#{category.icon}"), class: "category-icon") %>
+  <%= image_tag("icons/#{category.icon}.svg", class: "category-icon") %>
   <h5><%= category.name %></h5>
   <p class="category-amount">$<%= "%.2f" % category.total_amount %></p>
 </div>
