@@ -118,7 +118,6 @@ Install this project with:
 
 
 ```sh
-  cd Recipe-App
   bundle install
   rails db:setup
   rails db:migrate
