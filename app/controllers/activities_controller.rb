@@ -21,13 +21,13 @@ class ActivitiesController < ApplicationController
 
   # POST /activities or /activities.json
   def create
-    @category = Category.find(params[:category_id])
     @activity = Activity.new(activity_params.merge(author: current_user))
-    @categories = @activity.categories
+    @categories = Category.where(user_id: current_user.id)
+
+    @category = Category.find(params[:category_id])
 
     respond_to do |format|
       if @activity.save
-        @activity.categories << @category
 
         format.html { redirect_to category_activities_url(category_id: @category.id), notice: "Activity was successfully created." }
         format.json { render :show, status: :created, location: @activity }
@@ -72,6 +72,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :amount, :category_id)
+      params.require(:activity).permit(:name, :amount, category_ids: [])
     end
 end

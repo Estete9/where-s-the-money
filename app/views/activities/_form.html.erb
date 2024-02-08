@@ -21,12 +21,14 @@
       <%= form.text_field :amount, placeholder: "Amount", class: "form-control" %>
     </div>
       <div class="field">
-      <label for="category_id" class="form-label">Category</label>
-      <select name="category[id]" id="category_id" class="form-select">
-        <%= @categories.each do |category| %>
-          <option value="<% category.id %>"><%= category.name %></option>
+     <div class="form-group">
+        <%= form.label :category_ids, 'Categories' %><br>
+        <% @categories.each do |category| %>
+          <%= check_box_tag 'activity[category_ids][]', category.id, false, id: "category_#{category.id}" %>
+          <%= label_tag "category_#{category.id}", category.name %><br>
         <% end %>
-      </select>
+      </div>
+
     </div>
   </div>
 
