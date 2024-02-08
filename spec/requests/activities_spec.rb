@@ -12,92 +12,88 @@ require 'pry'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/activities", type: :request do
-
+RSpec.describe '/activities', type: :request do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
   let(:valid_attributes) { attributes_for(:activity, author: user, categories: [category]) }
-  let(:invalid_attributes) {
+  let(:invalid_attributes) do
     {
       name: nil,
       amount: nil,
       author_id: user.id,
       category_ids: [category.id]
     }
-   }
+  end
 
   before do
     sign_in user
   end
 
-  describe "GET /index" do
-    it "renders a successful response" do
-      activity = build(:activity, author: user, categories: [category])
+  describe 'GET /index' do
+    it 'renders a successful response' do
+      build(:activity, author: user, categories: [category])
       get category_activities_path(category_id: category.id)
 
       expect(response).to be_successful
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
+  describe 'GET /new' do
+    it 'renders a successful response' do
       get new_category_activity_path(category_id: category.id)
       expect(response).to be_successful
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Activity" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new Activity' do
+        expect do
           post category_activities_path(category_id: category.id), params: { activity: valid_attributes }
-        }.to change(Activity, :count).by(1)
+        end.to change(Activity, :count).by(1)
       end
 
-      it "redirects to the activities view" do
+      it 'redirects to the activities view' do
         post category_activities_path(category_id: category.id), params: { activity: valid_attributes }
         expect(response).to redirect_to(category_activities_path(category_id: category.id))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new Activity" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new Activity' do
+        expect do
           post category_activities_path(category_id: category.id), params: { activity: invalid_attributes }
-
-        }.to change(Activity, :count).by(0)
+        end.to change(Activity, :count).by(0)
       end
-
 
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
         post category_activities_path(category_id: category.id), params: { activity: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
         {
-          name: "New Name",
+          name: 'New Name',
           amount: 10.0,
           author_id: user.id,
           category_ids: [category.id]
         }
-      }
+      end
 
-      it "updates the requested activity" do
+      it 'updates the requested activity' do
         activity = create(:activity, author: user, categories: [category])
         patch category_activity_path(category_id: category.id, id: activity.id), params: { activity: new_attributes }
         activity.reload
 
-        expect(activity.name).to eq("New Name")
+        expect(activity.name).to eq('New Name')
         expect(activity.amount).to eq(10.0)
       end
 
-      it "redirects to the activity" do
+      it 'redirects to the activity' do
         activity = create(:activity, author: user, categories: [category])
         patch category_activity_path(category_id: category.id, id: activity.id), params: { activity: new_attributes }
         activity.reload
@@ -105,26 +101,25 @@ RSpec.describe "/activities", type: :request do
       end
     end
 
-    context "with invalid parameters" do
-
+    context 'with invalid parameters' do
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         activity = create(:activity, author: user, categories: [category])
-        patch category_activity_path(category_id: category.id, id: activity.id), params: { activity: invalid_attributes }
+        patch category_activity_path(category_id: category.id, id: activity.id),
+              params: { activity: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested activity" do
+  describe 'DELETE /destroy' do
+    it 'destroys the requested activity' do
       activity = create(:activity, author: user, categories: [category])
-      expect {
+      expect do
         delete category_activity_path(category_id: category.id, id: activity.id)
-      }.to change(Activity, :count).by(-1)
+      end.to change(Activity, :count).by(-1)
     end
 
-    it "redirects to the activities list" do
+    it 'redirects to the activities list' do
       activity = create(:activity, author: user, categories: [category])
       delete category_activity_path(category_id: category.id, id: activity.id)
       expect(response).to redirect_to(category_activities_path(category_id: category.id))

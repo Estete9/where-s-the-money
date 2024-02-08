@@ -3,7 +3,7 @@ require 'pry'
 
 RSpec.describe Category, type: :model do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
 
   it 'is valid with a name, and icon class' do
     expect(category).to be_valid
@@ -28,7 +28,7 @@ RSpec.describe Category, type: :model do
   it 'can have multiple activities' do
     activity1 = create(:activity, author: user)
     activity2 = create(:activity, author: user)
-    category = create(:category, user: user)
+    category = create(:category, user:)
 
     category.activities << activity1
     category.activities << activity2

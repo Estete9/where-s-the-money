@@ -23,8 +23,8 @@ RSpec.describe User, type: :model do
   end
 
   it 'has many categories' do
-    category1 = create(:category, user: user)
-    category2 = create(:category, user: user)
+    category1 = create(:category, user:)
+    category2 = create(:category, user:)
 
     expect(user.categories).to include(category1, category2)
   end

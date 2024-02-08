@@ -52,9 +52,9 @@ RSpec.describe ActivitiesController, type: :controller do
       let(:valid_attributes) { attributes_for(:activity) }
 
       it 'creates a new activity' do
-        expect {
+        expect do
           post :create, params: { category_id: category.id, activity: valid_attributes }
-        }.to change(Activity, :count).by(1)
+        end.to change(Activity, :count).by(1)
       end
 
       it 'redirects to the activities index' do
