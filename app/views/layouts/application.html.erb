@@ -13,13 +13,6 @@
   </head>
 
   <body>
-   <div id="flash-messages">
-      <% if notice.present? %>
-        <p style="color: white" class="notice"><%= notice %></p>
-      <% elsif alert.present? %>
-        <p style="color: red" class="alert"><%= alert %></p>
-      <% end %>
-    </div>
       <%= yield %>
   </body>
 </html>
