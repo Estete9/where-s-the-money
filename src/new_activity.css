@@ -1,0 +1,31 @@
+.new-activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.new-activity-wrapper * {
+  margin-bottom: 0;
+}
+.new-activity-wrapper .new-activity-header h1 {
+  flex: 1;
+  text-align: center;
+}
+.new-activity-wrapper .new-activity-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.new-activity-wrapper .new-activity-form .category-form-content {
+  padding: 10px;
+  flex: 1;
+}
+.new-activity-wrapper .new-activity-form .field input::placeholder {
+  opacity: 0.5;
+}
+.new-activity-wrapper .new-activity-form .form-control {
+  height: 50px;
+}
+.new-activity-wrapper .new-activity-form .form-select {
+  height: 50px;
+  opacity: 0.5;
+}/*# sourceMappingURL=new_activity.css.map */

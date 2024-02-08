@@ -1,9 +1,10 @@
-<h1>New activity</h1>
-
-<%= render "form", activity: @activity %>
-
-<br>
-
-<%= link_to category_activities_path(@category.id) do %>
-  <%= image_tag("back_arrow.svg", alt: "Back", width: "20", height: "20") %>
-<% end %>
+<div class="new-activity-wrapper">
+  <div class="new-activity-header header">
+    <%= link_to category_activities_path(@category.id) do %>
+      <%= image_tag("back_arrow.svg", alt: "Back", width: "20", height: "20") %>
+    <% end %>
+    <h1>New activity</h1>
+  </div>
+  
+  <%= render "form", activity: @activity %>
+</div>

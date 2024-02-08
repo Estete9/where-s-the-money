@@ -1,0 +1,42 @@
+.new-activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+  * {
+    margin-bottom: 0;
+  }
+  
+  .new-activity-header {
+    h1 {
+      flex: 1;
+      text-align: center;
+    }
+  }
+  
+  
+  .new-activity-form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    .category-form-content {
+      padding: 10px;
+      flex: 1;
+
+    }
+
+    .field input::placeholder {
+      opacity: 0.5;
+    }
+
+    .form-control  {
+      height: 50px;
+    }
+    
+    .form-select {
+      height: 50px;
+      opacity: 0.5;
+    }
+  }
+}
