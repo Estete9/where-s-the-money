@@ -20,12 +20,13 @@
     <div class="mb-3 field">
       <%= form.text_field :amount, placeholder: "Amount", class: "form-control" %>
     </div>
-      <div class="field">
-     <div class="form-group">
-        <%= form.label :category_ids, 'Categories' %><br>
+    <div class="field">
+      <%= form.label :category_ids, 'Categories' %><br>
+      <div class="form-group scrollable-checkboxes">
         <% @categories.each do |category| %>
           <%= check_box_tag 'activity[category_ids][]', category.id, false, id: "category_#{category.id}" %>
-          <%= label_tag "category_#{category.id}", category.name %><br>
+          <%= label_tag "category_#{category.id}", category.name %>
+          <hr>
         <% end %>
       </div>
 

@@ -28,4 +28,16 @@
 .new-activity-wrapper .new-activity-form .form-select {
   height: 50px;
   opacity: 0.5;
+}
+
+.scrollable-checkboxes {
+  max-height: 50vh;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+.scrollable-checkboxes hr {
+  margin: 5px 0;
 }/*# sourceMappingURL=new_activity.css.map */
