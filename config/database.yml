@@ -16,5 +16,5 @@ test:
 production:
   <<: *default
   database: where_s_the_money_production
-  username: where_s_the_money
+  username: <%= ENV["WHERE_S_THE_MONEY_DATABASE_NAME"] %>
   password: <%= ENV["WHERE_S_THE_MONEY_DATABASE_PASSWORD"] %>
