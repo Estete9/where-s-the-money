@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this activity", @activity %> |
-  <%= link_to "Back to activities", activities_path %>
+  <%= link_to "Show this activity", category_activity_path(category_id: @category.id, id: @activity.id) %> |
+  <%= link_to "Back to activities", category_activities_path(category_id: @category.id) %>
 </div>

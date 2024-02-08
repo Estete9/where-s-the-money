@@ -4,5 +4,6 @@ FactoryBot.define do
     amount { Faker::Number.decimal(l_digits: 2) }
 
     association :author, factory: :user
+    categories { [association(:category)] }
   end
 end
