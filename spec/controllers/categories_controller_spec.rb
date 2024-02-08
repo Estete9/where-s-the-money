@@ -38,7 +38,7 @@ RSpec.describe CategoriesController, type: :controller do
         end.to change(Category, :count).by(1)
       end
 
-      it 'redirects to the inventories list' do
+      it 'redirects to the categories list' do
         post :create, params: { category: attributes_for(:category) }
         expect(response).to redirect_to(categories_path)
       end
