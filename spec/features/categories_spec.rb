@@ -35,4 +35,16 @@ RSpec.feature "Categories", type: :feature do
 
     expect(page).to have_current_path(new_category_path)
   end
+
+  scenario "User sees the total sum of the activities amount" do
+    category = create(:category, user: user)
+    activity1 = create(:activity, author: user, categories: [category])
+    activity2 = create(:activity, author: user, categories: [category])
+
+    login_as(user)
+
+    visit categories_path
+
+    expect(page).to have_content(category.total_amount)
+  end
 end
