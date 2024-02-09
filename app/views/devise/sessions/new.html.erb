@@ -1,0 +1,30 @@
+<div class="devise-wrapper">
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="devise-header">
+      <%= link_to root_path do %>
+        <%= image_tag("back_arrow.svg", alt: "Back", width: "25", height: "25") %>
+      <% end %>
+      <h2>LOG IN</h2>
+      <div class="actions">
+        <%= f.submit "Next", class: "btn next-btn" %>
+      </div>
+    </div>
+  
+    <div class="form-content">
+      <div class="inputs">
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email@example.com", class: "form-field form-control" %>
+        </div>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-field form-control" %>
+        </div>
+      </div>
+
+      <div class="recov-regis-btns">  
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  <% end %>
+  
+</div>

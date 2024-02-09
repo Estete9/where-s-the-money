@@ -1,0 +1,31 @@
+<div class="activities-wrapper">
+  <div class="activities-header header">
+    <%= link_to root_path, class: "back-arrow" do %>
+      <%= image_tag("back_arrow.svg", alt: "Back", width: "20", height: "20") %>
+    <% end %>
+    <h1>ACTIVITIES</h1>
+  </div>
+
+  <div class="category-info">
+    <h5 class="category-info-name"><%= @category.name %></h5>
+    <strong><p>$<%= "%.2f" % @category.total_amount %></p></strong>
+  </div>
+    
+  <div class="activities-content">
+    <div id="activities">
+      <% if @activities.any?%>
+        <% @activities.each do |activity| %>
+            <%= render activity %>
+        <% end %>
+      <% else %>
+        <div class="text-center py-3 bg-light border rounded">
+          <p class="text-muted mb-0">Empty list, new Activities will show here...</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="form-btn-section">
+    <%= link_to "Add a New Activity", new_category_activity_path(category_id: @category.id), class: "btn btn-primary form-btn" %>
+  </div>
+
+</div>

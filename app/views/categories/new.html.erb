@@ -1,0 +1,9 @@
+<div class="new-category-wrapper">
+  <div class="new-category-header header">
+    <%= link_to root_path do %>
+      <%= image_tag("back_arrow.svg", alt: "Back", width: "20", height: "20") %>
+    <% end %>
+    <h1>New category</h1>
+  </div>
+  <%= render "form", category: @category %>
+</div>

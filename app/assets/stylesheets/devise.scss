@@ -1,0 +1,66 @@
+$color-main: #3378c2;
+$color-second: #5fb523;
+$color-text: #434b52;
+
+.devise-wrapper {
+  background-color: rgb(242, 240, 240);
+  
+  form {
+    
+    height: 90vh;
+  }
+
+  .inputs {
+    flex: 1;
+  }
+  
+  .form-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0;
+    background-color: white;
+  }
+
+  * {
+    color: $color-text;
+  }
+  .devise-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-main;
+    align-items: center;
+    padding: 15px;
+    h2 {
+      margin-bottom: 0;
+    }
+
+    * {
+      color: white;
+    }
+
+    .next-btn {
+      padding: 0;
+    }
+  }
+
+  .recov-regis-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+    gap: 10px;
+    
+    .btn {
+      border: $color-main 1px solid;
+      color: $color-main;
+    }
+  }
+
+  .form-field {
+    height: 50px;
+  }
+
+  .field input::placeholder {
+    opacity: 0.5;
+  }
+}

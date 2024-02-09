@@ -1,0 +1,28 @@
+.splash-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.splash-wrapper .splash-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.splash-wrapper .splash-header * {
+  color: #434b52;
+}
+.splash-wrapper #devise-btns {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vh;
+  margin-top: auto;
+  gap: 1vh;
+}
+.splash-wrapper #devise-btns .devise-btn {
+  border-radius: 0.2rem;
+  margin: 0 4vw;
+}
+.splash-wrapper #devise-btns .log-in-btn {
+  background-color: #3378c2;
+}/*# sourceMappingURL=splash_screen.css.map */

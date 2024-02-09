@@ -1,0 +1,25 @@
+$color-main: #3378c2;
+$color-second: #5fb523;
+$color-text: #434b52;
+
+.picture-section {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+  color: $color-text;
+  opacity: 0.5;
+
+  .profile-image {
+    border-radius: 50%;
+    border: $color-text 2px solid;
+    width: 50px;
+    height: 50px;
+    padding: 3px; 
+    background-color: #434b52;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

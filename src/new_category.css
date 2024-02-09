@@ -1,0 +1,31 @@
+.new-category-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.new-category-wrapper * {
+  margin-bottom: 0;
+}
+.new-category-wrapper .new-category-header h1 {
+  flex: 1;
+  text-align: center;
+}
+.new-category-wrapper .new-category-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.new-category-wrapper .new-category-form .category-form-content {
+  padding: 10px;
+  flex: 1;
+}
+.new-category-wrapper .new-category-form .field input::placeholder {
+  opacity: 0.5;
+}
+.new-category-wrapper .new-category-form .form-control {
+  height: 50px;
+}
+.new-category-wrapper .new-category-form .form-select {
+  height: 50px;
+  opacity: 0.5;
+}/*# sourceMappingURL=new_category.css.map */

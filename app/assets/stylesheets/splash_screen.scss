@@ -1,0 +1,39 @@
+$color-main: #3378c2;
+$color-second: #5fb523;
+$color-text: #434b52;
+
+.splash-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .splash-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    * {
+      color: $color-text;
+    }
+  }
+
+  #devise-btns {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4vh;
+    margin-top: auto;
+    gap: 1vh;
+    
+    .devise-btn {
+      border-radius: 0.2rem;
+      margin: 0 4vw;
+    }
+
+    .log-in-btn {
+    background-color: $color-main; 
+    }
+  }
+}
+
+

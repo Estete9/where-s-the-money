@@ -1,0 +1,46 @@
+.devise-wrapper {
+  background-color: rgb(242, 240, 240);
+}
+.devise-wrapper form {
+  height: 90vh;
+}
+.devise-wrapper .inputs {
+  flex: 1;
+}
+.devise-wrapper .form-content {
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 0;
+  background-color: white;
+}
+.devise-wrapper * {
+  color: #434b52;
+}
+.devise-wrapper .devise-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3378c2;
+  align-items: center;
+  padding: 15px;
+}
+.devise-wrapper .devise-header h2 {
+  margin-bottom: 0;
+}
+.devise-wrapper .devise-header * {
+  color: white;
+}
+.devise-wrapper .devise-header .next-btn {
+  padding: 0;
+}
+.devise-wrapper .recov-regis-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+.devise-wrapper .form-field {
+  border-radius: 0;
+}
+.devise-wrapper .email-field input::placeholder, .devise-wrapper .password-field input::placeholder {
+  opacity: 0.5;
+}/*# sourceMappingURL=log-in.css.map */

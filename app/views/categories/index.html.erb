@@ -1,0 +1,26 @@
+<div id="categories-wrapper">
+  <div class="categories-header header">
+    <h1>CATEGORIES</h1>
+  </div>
+  
+  <div class="categories-content">
+    <div id="categories">
+      <% if @categories.any?%>
+        <% @categories.each do |category| %>
+          <%= link_to category_activities_path(category_id: category.id) do %>
+            <%= render category %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <div class="text-center py-3 bg-light border rounded">
+          <p class="text-muted mb-0">Empty list, new Categories will show here...</p>
+        </div>
+      <% end %>
+    </div>
+    
+  </div>
+  
+  <div class="form-btn-section">
+  <%= link_to "Add a New Category", new_category_path, class: "btn btn-primary form-btn" %>
+  </div>
+</div>
