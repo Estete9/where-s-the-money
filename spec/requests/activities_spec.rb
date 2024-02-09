@@ -46,32 +46,33 @@ RSpec.describe '/activities', type: :request do
   end
 
   describe 'POST /create' do
-    context 'with valid parameters' do
-      it 'creates a new Activity' do
-        expect do
-          post category_activities_path(category_id: category.id), params: { activity: valid_attributes }
-        end.to change(Activity, :count).by(1)
-      end
-
-      it 'redirects to the activities view' do
-        post category_activities_path(category_id: category.id), params: { activity: valid_attributes }
-        expect(response).to redirect_to(category_activities_path(category_id: category.id))
-      end
+  context 'with valid parameters' do
+    it 'creates a new Activity' do
+      expect do
+        post category_activities_path(category_id: category.id), params: { activity: valid_attributes.merge(category_ids: [category.id]) }
+      end.to change(Activity, :count).by(1)
     end
 
-    context 'with invalid parameters' do
-      it 'does not create a new Activity' do
-        expect do
-          post category_activities_path(category_id: category.id), params: { activity: invalid_attributes }
-        end.to change(Activity, :count).by(0)
-      end
-
-      it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post category_activities_path(category_id: category.id), params: { activity: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
+    it 'redirects to the activities view' do
+      post category_activities_path(category_id: category.id), params: { activity: valid_attributes.merge(category_ids: [category.id]) }
+      expect(response).to redirect_to(category_activities_path(category_id: category.id))
     end
   end
+
+  context 'with invalid parameters' do
+    it 'does not create a new Activity' do
+      expect do
+        post category_activities_path(category_id: category.id), params: { activity: invalid_attributes }
+      end.to change(Activity, :count).by(0)
+    end
+
+    it "renders a response with 422 status (i.e. to display the 'new' template)" do
+      post category_activities_path(category_id: category.id), params: { activity: invalid_attributes }
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
+  end
+end
+
 
   describe 'PATCH /update' do
     context 'with valid parameters' do
