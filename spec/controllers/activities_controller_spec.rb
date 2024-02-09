@@ -53,12 +53,12 @@ RSpec.describe ActivitiesController, type: :controller do
 
       it 'creates a new activity' do
         expect do
-          post :create, params: { category_id: category.id, activity: valid_attributes }
+          post :create, params: { category_id: category.id, activity: valid_attributes.merge(category_ids: [category.id]) }
         end.to change(Activity, :count).by(1)
       end
 
       it 'redirects to the activities index' do
-        post :create, params: { category_id: category.id, activity: valid_attributes }
+        post :create, params: { category_id: category.id, activity: valid_attributes.merge(category_ids: [category.id]) }
         expect(response).to redirect_to(category_activities_path(category_id: category.id))
       end
     end
