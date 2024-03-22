@@ -80,7 +80,7 @@ The **Where's the Money** This is a mobile web application where you can manage 
 <!-- LIVE DEMO  -->
 ## 💻 Live Demo <a name="live-demo"></a>
 
-Check the live demo [here](https://wheres-the-money.onrender.com)
+Check the live demo [here](https://where-s-the-money.onrender.com)
 
 Check the documentation recording [here](https://www.loom.com/share/2452b6b963424aca8b3f9eec7a48f281) 
 
